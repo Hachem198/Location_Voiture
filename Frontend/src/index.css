@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Tailwind dark theme for react-datepicker */
+.react-datepicker__input-container input {
+  @apply bg-gray-800 text-white border border-gray-600 p-2 rounded;
+}
+
+.react-datepicker-popper {
+  @apply z-50; /* Ensure popper is on top */
+}
+
+.react-datepicker-dark .react-datepicker__header {
+  @apply bg-gray-800 border-b border-gray-600;
+}
+
+.react-datepicker-dark .react-datepicker__day,
+.react-datepicker-dark .react-datepicker__day-name,
+.react-datepicker-dark .react-datepicker__time-list-item {
+  @apply text-white bg-gray-800;
+}
+
+.react-datepicker-dark .react-datepicker__day--selected,
+.react-datepicker-dark .react-datepicker__time-list-item--selected {
+  @apply bg-blue-500;
+}
+
+.react-datepicker-dark .react-datepicker__day:hover,
+.react-datepicker-dark .react-datepicker__time-list-item:hover {
+  @apply bg-gray-600;
+}
+/* Custom styles for react-datepicker to make the time picker background transparent */
+.react-datepicker__time-container .react-datepicker__time {
+  background-color: transparent;
+}
+
+.react-datepicker__time-container .react-datepicker__time-box {
+  background-color: transparent;
+}
+
+/* Adjust the list item hover to match the transparent background */
+.react-datepicker__time-list-item:hover {
+  background-color: rgba(
+    75,
+    85,
+    99,
+    0.3
+  ); /* Tailwind's gray-600 with reduced opacity */
+}
+
+/* Style the selected time with a semi-transparent background */
+.react-datepicker__time-list-item--selected {
+  background-color: rgba(
+    59,
+    130,
+    246,
+    0.5
+  ); /* Tailwind's blue-500 with reduced opacity */
+}
